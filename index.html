@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Sentinela</title>
+</head>
+<body>
+
+
+<div class="app">
+  
+  <!-- MENU LATERAL -->
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="logo-icon">S</div>
+      <div>
+        <strong>SENTINELA</strong>
+        <span>Resiliência Escolar</span>
+      </div>
+    </div>
+    <nav>
+      
+      <button class="nav-item active" data-section="dashboard">
+        <span><i class="fa-solid fa-house-user"></i></span> Dashboard
+      </button>
+      
+      <button class="nav-item" data-section="monitoramento">
+        <span><i class="fa-solid fa-people-roof"></i></span> Monitoramento
+      </button>
+      
+      <button class="nav-item" data-section="mapa">
+        <span><i class="fa-solid fa-map"></i></span> Mapa da escola
+      </button>
+
+      <button class="nav-item" data-section="simulador">
+        <span><i class="fa-solid fa-temperature-arrow-up"></i></span> E se...?
+      </button>
+
+      <button class="nav-item" data-section="resposta">
+        <span><i class="fa-solid fa-circle-question"></i></span> Central de Resposta
+      </button>
+
+      <button class="nav-item" data-section="educacao">
+        <span><i class="fa-solid fa-chart-column"></i></span> Continuidade
+      </button>
+
+      <button class="nav-item" data-section="evolucao">
+        <span><i class="fa-solid fa-arrow-up-right-dots"></i></span> Evolução
+      </button>
+      <button class="nav-item" data-section="bemestar">
+  <span><i class="fa-solid fa-heart-circle-check"></i></span> Bem-estar Emocional
+</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="status-dot"></div>
+      <div>
+        <strong>Sistema ativo</strong>
+        <small>Dados simulados</small>
+      </div>
+    </div>
+  </aside>
+
+
+  <!-- CONTEÚDO -->
+  <main class="main">
+
+    <!-- TOPO -->
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">GESTÃO PREVENTIVA</p>
+        <h1 id="pageTitle">Visão geral</h1>
+      </div>
+
+      <div class="school-selector">
+        <span>Escola-modelo</span>
+        <strong>Escola Sentinela</strong>
+      </div>
+    </header>
+
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="section active">
+
+      <div class="hero">
+        <div>
+          <span class="badge">MONITORAMENTO ATIVO</span>
+          <h2>Preparar antes de precisar reagir.</h2>
+          <p>
+            O SENTINELA cruza informações ambientais, de saúde e de educação
+            para estimar riscos e apoiar decisões preventivas.
+          </p>
+        </div>
+
+        <div class="hero-symbol">✦</div>
+      </div>
+
+
+      <div class="dashboard-grid">
+
+        <!-- IRE -->
+        <div class="card ire-card">
+          <div class="card-header">
+            <div>
+              <span class="label">IRE</span>
+              <h3>Índice de Resiliência Escolar</h3>
+            </div>
+
+            <span class="info">i</span>
+          </div>
+
+          <div class="ire-content">
+            <div class="ire-circle">
+              <div>
+                <strong id="ireValue">87</strong>
+                <span>/100</span>
+              </div>
+            </div>
+
+            <div>
+              <span class="positive">● Boa preparação</span>
+              <p>
+                A escola apresenta boas condições de preparação
+                para os cenários analisados.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- DIMENSÕES -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <span class="label">DIMENSÕES</span>
+              <h3>Visão integrada</h3>
+            </div>
+          </div>
+
+          <div class="dimension">
+            <div>
+              <span>🌱 Ambiente</span>
+              <strong id="environmentValue">91</strong>
+            </div>
+            <div class="progress">
+              <span id="environmentBar" style="width:91%"></span>
+            </div>
+          </div>
+
+          <div class="dimension">
+            <div>
+              <span>♥ Saúde</span>
+              <strong id="healthValue">84</strong>
+            </div>
+            <div class="progress">
+              <span id="healthBar" style="width:84%"></span>
+            </div>
+          </div>
+
+          <div class="dimension">
+            <div>
+              <span>▣ Educação</span>
+              <strong id="educationValue">86</strong>
+            </div>
+            <div class="progress">
+              <span id="educationBar" style="width:86%"></span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- ALERTA -->
+        <div class="card alert-card">
+          <div class="card-header">
+            <div>
+              <span class="label">ATENÇÃO</span>
+              <h3>Sinais identificados</h3>
+            </div>
+            <span class="alert-icon">!</span>
+          </div>
+
+          <div class="alert-item">
+            <strong>Temperatura elevada</strong>
+            <span>Ambiente</span>
+          </div>
+
+          <div class="alert-item">
+            <strong>Ventilação abaixo do ideal</strong>
+            <span>Saúde</span>
+          </div>
+
+          <button class="outline-btn" data-go="monitoramento">
+            Ver monitoramento →
+          </button>
+        </div>
+
+      </div>
+
+
+      <!-- VISÃO RÁPIDA -->
+      <div class="section-title">
+        <div>
+          <span class="label">VISÃO RÁPIDA</span>
+          <h3>O que está acontecendo?</h3>
+        </div>
+      </div>
+
+      <div class="quick-grid">
+
+        <div class="quick-card">
+          <div class="quick-icon green">🌱</div>
+          <div>
+            <strong>Ambiente</strong>
+            <p>Condições ambientais monitoradas.</p>
+          </div>
+          <span class="quick-number">91</span>
+        </div>
+
+        <div class="quick-card">
+          <div class="quick-icon orange">♥</div>
+          <div>
+            <strong>Saúde</strong>
+            <p>Exposição e condições de bem-estar.</p>
+          </div>
+          <span class="quick-number">84</span>
+        </div>
+
+        <div class="quick-card">
+          <div class="quick-icon blue">▣</div>
+          <div>
+            <strong>Educação</strong>
+            <p>Continuidade do processo de aprendizagem.</p>
+          </div>
+          <span class="quick-number">86</span>
+        </div>
+
+      </div>
+
+    
+    </section>
+
+
+    <!-- MONITORAMENTO -->
+    <section id="monitoramento" class="section">
+
+      <div class="section-intro">
+        <span class="label">MONITORAMENTO</span>
+        <h2>Analise as condições da escola</h2>
+        <p>
+          Ajuste os indicadores para simular diferentes situações.
+          O sistema estima os impactos a partir das variáveis informadas.
+        </p>
+      </div>
+
+
+      <div class="monitor-layout">
+
+        <div class="card controls-card">
+
+          <div class="card-header">
+            <div>
+              <span class="label">VARIÁVEIS</span>
+              <h3>Condições atuais</h3>
+            </div>
+          </div>
+
+
+          <div class="control">
+
+            <div class="control-top">
+              <label for="temperature">Temperatura</label>
+              <strong><span id="temperatureOutput">28</span> °C</strong>
+            </div>
+
+            <input
+              type="range"
+              id="temperature"
+              min="18"
+              max="45"
+              value="28"
+            >
+
+            <div class="range-labels">
+              <span>18°C</span>
+              <span>45°C</span>
+            </div>
+
+          </div>
+
+
+          <div class="control">
+
+            <div class="control-top">
+              <label for="humidity">Umidade</label>
+              <strong><span id="humidityOutput">60</span>%</strong>
+            </div>
+
+            <input
+              type="range"
+              id="humidity"
+              min="20"
+              max="100"
+              value="60"
+            >
+
+            <div class="range-labels">
+              <span>20%</span>
+              <span>100%</span>
+            </div>
+
+          </div>
+
+
+          <div class="control">
+
+            <div class="control-top">
+              <label for="noise">Ruído</label>
+              <strong><span id="noiseOutput">55</span> dB</strong>
+            </div>
+
+            <input
+              type="range"
+              id="noise"
+              min="30"
+              max="100"
+              value="55"
+            >
+
+            <div class="range-labels">
+              <span>30 dB</span>
+              <span>100 dB</span>
+            </div>
+
+          </div>
+
+
+          <div class="control">
+
+            <div class="control-top">
+              <label for="water">Consumo de água</label>
+              <strong><span id="waterOutput">50</span>%</strong>
+            </div>
+
+            <input
+              type="range"
+              id="water"
+              min="0"
+              max="100"
+              value="50"
+            >
+
+            <div class="range-labels">
+              <span>Normal</span>
+              <span>Alto</span>
+            </div>
+
+          </div>
+
+
+          <button id="analyzeBtn" class="primary-btn">
+            ANALISAR AGORA
+          </button>
+
+        </div>
+
+
+        <div class="card analysis-card">
+
+          <div class="card-header">
+            <div>
+              <span class="label">ANÁLISE</span>
+              <h3>Resultado estimado</h3>
+            </div>
+          </div>
+
+          <div id="analysisResult" class="analysis-result normal">
+
+            <div class="result-icon">✓</div>
+
+            <div>
+              <strong>Condições dentro do esperado</strong>
+              <p>
+                Nenhum cenário crítico foi identificado
+                nas condições atuais.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="impact-list">
+
+            <div>
+              <span>Ambiente</span>
+              <strong id="monitorEnvironment">91</strong>
+            </div>
+
+            <div>
+              <span>Saúde</span>
+              <strong id="monitorHealth">84</strong>
+            </div>
+
+            <div>
+              <span>Educação</span>
+              <strong id="monitorEducation">86</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- MAPA -->
+    <section id="mapa" class="section">
+
+      <div class="section-intro">
+        <span class="label">DIGITAL TWIN</span>
+        <h2>Mapa de risco da escola</h2>
+        <p>
+          Uma representação simplificada dos principais pontos
+          monitorados dentro da escola.
+        </p>
+      </div>
+
+
+      <div class="map-layout">
+
+        <div class="card school-map">
+
+          <div class="map-title">
+            <strong>ESCOLA SENTINELA</strong>
+            <span>Planta simplificada</span>
+          </div>
+
+
+          <div class="map">
+
+            <button class="room normal-room" data-room="Sala 01">
+              <strong>Sala 01</strong>
+              <span>Normal</span>
+            </button>
+
+            <button class="room normal-room" data-room="Sala 02">
+              <strong>Sala 02</strong>
+              <span>Normal</span>
+            </button>
+
+            <button class="room warning-room" data-room="Sala 03">
+              <strong>Sala 03</strong>
+              <span>Atenção</span>
+            </button>
+
+            <button class="room danger-room" data-room="Sala 04">
+              <strong>Sala 04</strong>
+              <span>Risco térmico</span>
+            </button>
+
+            <button class="room warning-room" data-room="Banheiros">
+              <strong>Banheiros</strong>
+              <span>Atenção</span>
+            </button>
+
+            <button class="room danger-room" data-room="Reservatório">
+              <strong>Reservatório</strong>
+              <span>Verificar</span>
+            </button>
+
+            <button class="room normal-room" data-room="Biblioteca">
+              <strong>Biblioteca</strong>
+              <span>Normal</span>
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="card map-info">
+
+          <span class="label">PONTO SELECIONADO</span>
+
+          <h3 id="selectedRoom">Sala 04</h3>
+
+          <div class="status-large danger">
+            <span></span>
+            Risco térmico
+          </div>
+
+          <p id="roomDescription">
+            Temperatura acima da condição recomendada.
+            Verificar ventilação e condições de permanência.
+          </p>
+
+          <div class="recommendation">
+            <strong>Recomendação</strong>
+            <p>
+              Avaliar ventilação, reorganizar a ocupação
+              do espaço e acompanhar a temperatura.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SIMULADOR -->
+    <section id="simulador" class="section">
+
+      <div class="section-intro">
+        <span class="label">SIMULADOR</span>
+        <h2>E se...?</h2>
+        <p>
+          Explore cenários e veja quais dimensões da escola
+          podem ser mais afetadas.
+        </p>
+      </div>
+
+
+      <div class="scenario-grid">
+
+        <button class="scenario active" data-scenario="heat">
+          <span>☀</span>
+          <strong>Calor extremo</strong>
+          <small>Temperatura elevada</small>
+        </button>
+
+        <button class="scenario" data-scenario="rain">
+          <span>☂</span>
+          <strong>Chuva intensa</strong>
+          <small>Risco de alagamento</small>
+        </button>
+
+        <button class="scenario" data-scenario="water">
+          <span>◌</span>
+          <strong>Falta de água</strong>
+          <small>Abastecimento comprometido</small>
+        </button>
+
+        <button class="scenario" data-scenario="energy">
+          <span>⚡</span>
+          <strong>Falta de energia</strong>
+          <small>Interrupção do funcionamento</small>
+        </button>
+
+        <button class="scenario" data-scenario="room">
+          <span>▣</span>
+          <strong>Sala indisponível</strong>
+          <small>Espaço comprometido</small>
+        </button>
+
+      </div>
+
+
+      <div class="card simulation-result">
+
+        <div class="simulation-heading">
+          <div>
+            <span class="label">CENÁRIO</span>
+            <h3 id="scenarioTitle">Calor extremo</h3>
+          </div>
+
+          <button id="simulateBtn" class="primary-btn small">
+            SIMULAR
+          </button>
+        </div>
+
+
+        <div id="simulationContent">
+
+          <div class="simulation-alert">
+            <span>!</span>
+            <div>
+              <strong>Possível aumento do risco térmico</strong>
+              <p>
+                Temperatura elevada pode afetar o conforto,
+                o uso de água e as condições de aprendizagem.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="simulation-columns">
+
+            <div>
+              <span class="label">IMPACTO</span>
+
+              <div class="impact-meter">
+                <div class="meter-value high"></div>
+              </div>
+
+              <strong>Alto</strong>
+            </div>
+
+            <div>
+              <span class="label">DIMENSÕES AFETADAS</span>
+
+              <div class="tags">
+                <span>Ambiente</span>
+                <span>Saúde</span>
+                <span>Educação</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CENTRAL DE RESPOSTA -->
+    <section id="resposta" class="section">
+
+      <div class="section-intro">
+        <span class="label">CENTRAL DE RESPOSTA</span>
+        <h2>Da identificação para a ação</h2>
+        <p>
+          Identificar o risco é apenas o primeiro passo.
+          O SENTINELA organiza o que pode ser feito antes,
+          durante e depois do evento.
+        </p>
+      </div>
+
+
+      <div class="response-grid">
+
+        <div class="response-card before">
+          <span class="response-number">01</span>
+          <span class="label">ANTES</span>
+          <h3>Prevenção</h3>
+
+          <ul>
+            <li>Verificar áreas vulneráveis.</li>
+            <li>Revisar protocolos.</li>
+            <li>Orientar equipe e estudantes.</li>
+            <li>Preparar espaços alternativos.</li>
+          </ul>
+        </div>
+
+
+        <div class="response-card during">
+          <span class="response-number">02</span>
+          <span class="label">DURANTE</span>
+          <h3>Resposta</h3>
+
+          <ul>
+            <li>Ativar o plano definido.</li>
+            <li>Priorizar segurança.</li>
+            <li>Registrar alterações.</li>
+            <li>Reorganizar atividades.</li>
+          </ul>
+        </div>
+
+
+        <div class="response-card after">
+          <span class="response-number">03</span>
+          <span class="label">DEPOIS</span>
+          <h3>Recuperação</h3>
+
+          <ul>
+            <li>Avaliar os impactos.</li>
+            <li>Registrar o que aconteceu.</li>
+            <li>Recuperar conteúdos.</li>
+            <li>Atualizar medidas preventivas.</li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <div class="card action-summary">
+
+        <div>
+          <span class="label">PRÓXIMA AÇÃO</span>
+          <h3>Verificar a Sala 04</h3>
+          <p>
+            O mapa indica risco térmico neste espaço.
+            Recomenda-se verificar ventilação e temperatura.
+          </p>
+        </div>
+
+        <button class="primary-btn" data-go="mapa">
+          VER NO MAPA →
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- EDUCAÇÃO -->
+    <section id="educacao" class="section">
+
+      <div class="section-intro">
+        <span class="label">EDUCAÇÃO</span>
+        <h2>Continuidade da aprendizagem</h2>
+        <p>
+          Quando um evento interrompe as aulas, a escola
+          também precisa saber como manter a aprendizagem.
+        </p>
+      </div>
+
+
+      <div class="education-grid">
+
+        <div class="card">
+
+          <div class="card-header">
+            <div>
+              <span class="label">CONTEÚDOS</span>
+              <h3>Plano de continuidade</h3>
+            </div>
+          </div>
+
+          <div class="subject">
+            <div>
+              <strong>Matemática</strong>
+              <span>Concluído</span>
+            </div>
+            <div class="subject-bar">
+              <span style="width:100%"></span>
+            </div>
+          </div>
+
+          <div class="subject">
+            <div>
+              <strong>Língua Portuguesa</strong>
+              <span>Parcial</span>
+            </div>
+            <div class="subject-bar">
+              <span style="width:65%"></span>
+            </div>
+          </div>
+
+          <div class="subject">
+            <div>
+              <strong>Ciências</strong>
+              <span>Afetado</span>
+            </div>
+            <div class="subject-bar">
+              <span style="width:40%"></span>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card continuity-card">
+
+          <span class="label">REORGANIZAÇÃO</span>
+
+          <h3>Se houver interrupção...</h3>
+
+          <div class="continuity-step">
+            <span>1</span>
+            <p>Identificar conteúdos afetados.</p>
+          </div>
+
+          <div class="continuity-step">
+            <span>2</span>
+            <p>Definir prioridades de recuperação.</p>
+          </div>
+
+          <div class="continuity-step">
+            <span>3</span>
+            <p>Acompanhar a retomada das turmas.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EVOLUÇÃO -->
+    <section id="evolucao" class="section">
+
+      <div class="section-intro">
+        <span class="label">EVOLUÇÃO</span>
+        <h2>A escola aprende com cada evento</h2>
+        <p>
+          O objetivo não é apenas responder aos problemas,
+          mas melhorar a preparação ao longo do tempo.
+        </p>
+      </div>
+
+
+      <div class="card chart-card">
+
+        <div class="chart-header">
+          <div>
+            <span class="label">IRE</span>
+            <h3>Histórico do Índice de Resiliência</h3>
+          </div>
+
+          <strong>87/100</strong>
+        </div>
+
+        <div class="chart">
+
+          <div class="chart-y">
+            <span>100</span>
+            <span>75</span>
+            <span>50</span>
+            <span>25</span>
+            <span>0</span>
+          </div>
+
+          <div class="chart-area">
+
+            <div class="grid-line"></div>
+            <div class="grid-line"></div>
+            <div class="grid-line"></div>
+            <div class="grid-line"></div>
+
+            <svg viewBox="0 0 600 220" preserveAspectRatio="none">
+              <polyline
+                points="0,170 100,150 200,155 300,115 400,125 500,75 600,60"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"
+              />
+            </svg>
+
+            <div class="chart-labels">
+              <span>Mai</span>
+              <span>Jun</span>
+              <span>Jul</span>
+              <span>Ago</span>
+              <span>Set</span>
+              <span>Out</span>
+              <span>Hoje</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="future-box">
+
+        <div>
+          <span class="label">PRÓXIMA ETAPA</span>
+          <h3>Mais dados. Mais prevenção.</h3>
+          <p>
+            Em uma versão futura, o SENTINELA poderá receber
+            dados de sensores reais e informações meteorológicas
+            para ampliar a análise.
+          </p>
+        </div>
+
+        <div class="future-icon">↗</div>
+
+      </div>
+
+    </section>
+
+<!-- BEM-ESTAR EMOCIONAL -->
+<section id="bemestar" class="section">
+
+  <div class="section-intro">
+    <span class="label">CUIDADO E ACOLHIMENTO</span>
+    <h2>Bem-estar Emocional</h2>
+    <p>
+      A escola também precisa cuidar de como as pessoas se sentem.
+      Este espaço foi pensado para acolher os estudantes e ajudar
+      a gestão a compreender melhor o clima escolar.
+    </p>
+  </div>
+
+  <!-- MENSAGEM DE ACOLHIMENTO -->
+  <div class="wellbeing-hero">
+    <div>
+      <span class="wellbeing-tag">UM ESPAÇO PARA VOCÊ</span>
+      <h3>Como você está se sentindo na escola?</h3>
+      <p>
+        Nem todos os dias são fáceis, e tudo bem precisar de ajuda.
+        Seu bem-estar importa. Você pode refletir sobre como está
+        se sentindo e encontrar caminhos para conversar com alguém.
+      </p>
+      <button class="wellbeing-main-btn" data-go="bemestar"
+        onclick="document.getElementById('checkin').scrollIntoView({behavior:'smooth', block:'start'})">
+        Fazer minha reflexão
+      </button>
+    </div>
+    <div class="wellbeing-hero-icon">♡</div>
+  </div>
+
+  <div class="wellbeing-grid">
+
+    <!-- ESPAÇO DO ESTUDANTE -->
+    <div class="card wellbeing-checkin" id="checkin">
+      <div class="card-header">
+        <div>
+          <span class="label">MEU BEM-ESTAR</span>
+          <h3>Um momento para se ouvir</h3>
+        </div>
+        <span class="wellbeing-icon">☁</span>
+      </div>
+
+      <p class="wellbeing-description">
+        Se quiser, responda às perguntas abaixo para organizar
+        seus pensamentos. Não existem respostas certas ou erradas.
+      </p>
+
+      <form id="wellbeingForm">
+
+        <div class="wellbeing-question">
+          <label for="feeling">Como você tem se sentido na escola?</label>
+          <select id="feeling" required>
+            <option value="">Escolha uma opção</option>
+            <option value="bem">Bem e com tranquilidade</option>
+            <option value="mais-ou-menos">Mais ou menos</option>
+            <option value="cansado">Cansado ou sobrecarregado</option>
+            <option value="preocupado">Preocupado ou ansioso</option>
+            <option value="desanimado">Desanimado ou sem apoio</option>
+          </select>
+        </div>
+
+        <div class="wellbeing-question">
+          <label for="workload">Como está a quantidade de tarefas e cobranças?</label>
+          <select id="workload" required>
+            <option value="">Escolha uma opção</option>
+            <option value="equilibrada">Consigo lidar bem</option>
+            <option value="moderada">Às vezes fica difícil</option>
+            <option value="alta">Está pesada para mim</option>
+          </select>
+        </div>
+
+        <div class="wellbeing-question">
+          <label for="belonging">Você sente que faz parte da comunidade escolar?</label>
+          <select id="belonging" required>
+            <option value="">Escolha uma opção</option>
+            <option value="sim">Sim, sinto que pertenço a ela</option>
+            <option value="as-vezes">Às vezes</option>
+            <option value="nao">Não tenho sentido isso</option>
+          </select>
+        </div>
+
+        <div class="wellbeing-question">
+          <label for="respect">Você sente que é tratado com respeito na escola?</label>
+          <select id="respect" required>
+            <option value="">Escolha uma opção</option>
+            <option value="sim">Sim, na maioria das vezes</option>
+            <option value="as-vezes">Nem sempre</option>
+            <option value="nao">Não, isso tem sido difícil</option>
+          </select>
+        </div>
+
+        <p class="wellbeing-privacy">
+          <strong>Privacidade:</strong> neste protótipo, suas respostas
+          não são enviadas nem salvas. Elas servem apenas para mostrar
+          uma mensagem de orientação na própria tela.
+        </p>
+
+        <button type="submit" class="primary-btn">
+          CONCLUIR REFLEXÃO
+        </button>
+
+        <div id="wellbeingFeedback" class="wellbeing-feedback"
+          role="status" aria-live="polite" hidden></div>
+
+      </form>
+    </div>
+
+    <!-- INDICADORES COLETIVOS -->
+    <div class="card climate-card">
+      <div class="card-header">
+        <div>
+          <span class="label">CLIMA ESCOLAR</span>
+          <h3>Visão coletiva</h3>
+        </div>
+        <span class="wellbeing-icon">⌂</span>
+      </div>
+
+      <p class="wellbeing-description">
+        Estes indicadores ilustram como a gestão poderia acompanhar
+        o bem-estar da comunidade escolar sem expor respostas individuais.
+      </p>
+
+      <div class="climate-notice">
+        <span>i</span>
+        <p>
+          <strong>Dados fictícios para demonstração.</strong>
+          Não representam uma pesquisa real com estudantes.
+        </p>
+      </div>
+
+      <div class="climate-indicator">
+        <div class="climate-indicator-top">
+          <span>Sentimento de pertencimento</span>
+          <strong>76%</strong>
+        </div>
+        <div class="climate-bar">
+          <span style="width: 76%"></span>
+        </div>
+        <small>Percepção de fazer parte da escola</small>
+      </div>
+
+      <div class="climate-indicator">
+        <div class="climate-indicator-top">
+          <span>Respeito nas relações</span>
+          <strong>72%</strong>
+        </div>
+        <div class="climate-bar">
+          <span style="width: 72%"></span>
+        </div>
+        <small>Convivência respeitosa entre as pessoas</small>
+      </div>
+
+      <div class="climate-indicator">
+        <div class="climate-indicator-top">
+          <span>Equilíbrio da rotina</span>
+          <strong>58%</strong>
+        </div>
+        <div class="climate-bar climate-bar-warning">
+          <span style="width: 58%"></span>
+        </div>
+        <small>Percepção sobre tarefas, cobranças e descanso</small>
+      </div>
+
+      <div class="climate-indicator">
+        <div class="climate-indicator-top">
+          <span>Segurança para pedir ajuda</span>
+          <strong>64%</strong>
+        </div>
+        <div class="climate-bar">
+          <span style="width: 64%"></span>
+        </div>
+        <small>Percepção de acolhimento e apoio</small>
+      </div>
+
+      <p class="climate-footnote">
+        Os percentuais são exemplos visuais, não resultados medidos.
+        Em uma versão real, a divulgação dependeria de respostas
+        voluntárias, proteção de dados e quantidade suficiente de
+        participantes para evitar a identificação de alguém.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- CAMINHOS DE APOIO -->
+  <div class="section-title wellbeing-section-title">
+    <div>
+      <span class="label">APOIO E PREVENÇÃO</span>
+      <h3>O que pode ajudar?</h3>
+    </div>
+  </div>
+
+  <div class="support-grid">
+
+    <div class="support-card">
+      <span class="support-symbol">☏</span>
+      <h3>Converse com alguém</h3>
+      <p>
+        Procure um adulto de confiança, um professor, a coordenação
+        ou outro profissional da escola com quem se sinta à vontade.
+      </p>
+    </div>
+
+    <div class="support-card">
+      <span class="support-symbol">♡</span>
+      <h3>Respeite seu ritmo</h3>
+      <p>
+        Reconhecer o cansaço e falar sobre suas dificuldades pode
+        ser um primeiro passo para buscar apoio.
+      </p>
+    </div>
+
+    <div class="support-card">
+      <span class="support-symbol">✦</span>
+      <h3>A escola também pode agir</h3>
+      <p>
+        A gestão pode avaliar a carga de atividades, fortalecer
+        a convivência e criar espaços seguros de escuta e acolhimento.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="wellbeing-action">
+    <div>
+      <span class="label">COMPROMISSO DO SENTINELA</span>
+      <h3>Cuidar das pessoas também é prevenir riscos.</h3>
+      <p>
+        Os indicadores emocionais devem ajudar a escola a melhorar
+        o ambiente, e nunca servir para rotular, punir ou comparar estudantes.
+      </p>
+    </div>
+    <span class="wellbeing-action-icon">🌱</span>
+  </div>
+
+</section>
+    <!-- RODAPÉ -->
+    <footer>
+
+      <div>
+        <strong>SENTINELA</strong>
+        <span>
+          Tecnologia para uma escola mais preparada,
+          saudável e resiliente.
+        </span>
+      </div>
+
+      <div class="footer-right">
+        <span>Protótipo demonstrativo</span>
+        <span>Dados simulados</span>
+      </div>
+
+    </footer>
+
+  </main>
+
+</div>
+
+
+<!-- TOAST -->
+<div id="toast" class="toast">
+  <span>✓</span>
+  <p id="toastMessage">Análise atualizada.</p>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
